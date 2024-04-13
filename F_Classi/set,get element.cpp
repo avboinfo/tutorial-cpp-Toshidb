@@ -35,7 +35,7 @@ class vettore{
     }
 
     int getElement( int index){
-        return;
+        return v[index];        
     }
 
     int setElement( int index, int newvalue){
@@ -53,7 +53,8 @@ class vettore{
 int main(int argc, char const *argv[]){
     vettore vett(10, 10);
     for(int i = 0; i < 100; i++) vett.add(33*i);
-    vett.print();
+   
+    cout << vett.getElement;
 
     return 0;
 }

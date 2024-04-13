@@ -15,14 +15,14 @@ using namespace std;
 
 struct numeri
 {
-    int val_uno;
-    float val_due;
+    string nome;
+    int eta;
 };
 
 
 int main()
 {
-  struct numeri n;
+  struct  n;
   n.val_uno = 100;
   cout <<  "1) n.val_uno = " << n.val_uno << " - " << "n.val_due = " << n.val_due << endl;
   n.val_due = 33.33;
