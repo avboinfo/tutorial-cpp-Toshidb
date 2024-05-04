@@ -8,29 +8,27 @@ using namespace std;
 
 int compra(int N, int M, int A, int B)
 {
-    int Ncarnet=0;
-    int Nbiglietti=0;
-    int totale,costo;
+    int Ncarnet = 0;
+    int Nbiglietti = 0;
+    int totale, costo;
 
-
-
-
-
-
-    while(N>0){
-        totale=N*A;
-        if(totale>B){
-            N-=M;
+    while (N > 0)
+    {
+        totale = N * A;
+        if (totale > B)
+        {
+            N -= M;
             Ncarnet++;
-        }else{
-            Nbiglietti=N;
-            N=0;
+        }
+        else
+        {
+            Nbiglietti = N;
+            N = 0;
         }
     }
-    costo=(Ncarnet*B)+(Nbiglietti*A);
+    costo = (Ncarnet * B) + (Nbiglietti * A);
     return costo;
 
-   
     return costo;
 }
 
