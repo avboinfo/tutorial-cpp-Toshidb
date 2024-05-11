@@ -1,40 +1,30 @@
 #include <stdio.h>
 #include <assert.h>
-#include <time.h>
-#include <cstdlib>
-#include <iostream>
 
-using namespace std;
-
-int compra(int N, int M, int A, int B)
+int  compra(int N, int M, int A, int B)
 {
-    int Ncarnet = 0;
-    int Nbiglietti = 0;
-    int totale, costo;
-
-    while (N > 0)
-    {
-        totale = N * A;
-        if (totale > B)
-        {
-            N -= M;
-            Ncarnet++;
-        }
+    int tot = 0;
+    int n_carnet = 0;
+    
+    if(N>M){
+        double costo_singolo = (double) B / (double) M;
+        n_carnet = N / M;
+        if(A<costo_singolo)
+            tot = n_carnet * A * M;
         else
-        {
-            Nbiglietti = N;
-            N = 0;
-        }
+            tot = n_carnet * B;
     }
-    costo = (Ncarnet * B) + (Nbiglietti * A);
-    return costo;
-
-    return costo;
+    
+    N = N - M * n_carnet;
+    if(N * A < B)
+        tot += N * A;
+    else
+        tot += B;
+    return tot;
 }
 
 int main()
 {
-    srand(time(NULL));
     FILE *fr, *fw;
     int N, M, A, B;
 
