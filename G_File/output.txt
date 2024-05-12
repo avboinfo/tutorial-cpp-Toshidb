@@ -1,0 +1,10 @@
+Città numero #0: Milano
+Città numero #1: Bologna
+Città numero #2: Roma
+Città numero #3: Catanzaro
+Città numero #4: Cervia
+Città numero #5: Napoli
+Città numero #6: 
+Città numero #7: 
+Città numero #8: 
+Città numero #9: 

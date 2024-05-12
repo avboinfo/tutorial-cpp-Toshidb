@@ -3,11 +3,20 @@ using namespace std;
 
 int main() {
   // Create and open a text file
-  ofstream MyFile("multipli5.txt");
+  ifstream a("input.txt");
+  ofstream b("output.txt");
 
   // Write to the file
-  MyFile << "Files can be tricky, but it is fun enough!";
+ string myText;
+ string citta[10];
+ int cont = 0;
 
-  // Close the file
-  MyFile.close();
+ while(getline (a, myText)) {
+  citta[cont] = myText,
+  cont++;
+ }
+  for(int i = 0; i < 10; i++) {
+    b << "Città numero #" << i << ": " << citta[i] << endl;
+  }
+  
 }
