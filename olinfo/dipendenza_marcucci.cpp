@@ -11,6 +11,8 @@ using namespace std;
 // input data
 int N;
 vector<int> H, V;
+int h;
+int v;
 
 int main()
 {
@@ -28,8 +30,16 @@ int main()
 
     for (int i = 0; i < N; i++)
     {
+        h = H[i] + H[i + 1];
+        v = V[i] + V[i + 1];
+       /* if(v>h){
+            cout<<"Hamilton"<<endl;
+        }else{
+            cout<<"Verstappen"<<endl;
+        }
+        */
 
-        if (H[i] > V[i])
+        if (H[i]>V[i])
         {
             cout << "Hamilton" << endl;
         }
