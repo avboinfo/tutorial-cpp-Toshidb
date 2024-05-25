@@ -16,10 +16,7 @@ int trova_massimo(int N, int V[])
         if (V[N] > max)
             max = V[N];
     }
+}
+int main(){
 
-    int main{
-
-    }
-
-    return 0;
 }

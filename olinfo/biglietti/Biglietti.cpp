@@ -1,7 +1,16 @@
 #include <stdio.h>
 #include <assert.h>
 
-int  compra(int N, int M, int A, int B)
+int maxCarnet(int N, int M){
+        return N/M;
+}
+
+int restoCarnet(int N, int M){
+    int resto = N % M + maxCarnet(N, M);
+    return resto;
+}
+
+int  costoTotale(int N, int M, int A, int B)
 {
     int tot = 0;
     int n_carnet = 0;
@@ -33,7 +42,7 @@ int main()
 
     assert(4 == fscanf(fr, "%d%d%d%d", &N, &M, &A, &B));
 
-    fprintf(fw, "%d\n", compra(N, M, A, B));
+    fprintf(fw, "%d\n", costoTotale(N, M, A, B));
     fclose(fr);
     fclose(fw);
     return 0;
