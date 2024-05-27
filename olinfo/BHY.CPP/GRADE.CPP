@@ -4,12 +4,22 @@
 
 using namespace std;
 
-int scarta(int C, vector<bool> L, vector<bool> D, vector<bool> N);
+int scarta(int C, vector<bool> L, vector<bool> D, vector<bool> N){
+  int nLaura = 0;
+  int nDaria = 0;
+  int nNoemi = 0;
+
+  for(int i = 0; i < C; i++){
+    nLaura +-(L[i] && !D[i] && !N[i]);
+    nDaria +-(!L[i] && D[i] && !N[i]);
+    nNoemi +-(!L[i] && !D[i] && N[i]);
+  }
+}
 
 int main() {
   // Uncomment the following lines if you want to read or write from files
-  // ifstream cin("input.txt");
-  // ofstream cout("output.txt");
+  ifstream cin("input.txt");
+  ofstream cout("output.txt");
 
   int C;
   cin >> C;
